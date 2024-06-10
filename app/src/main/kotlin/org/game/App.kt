@@ -5,16 +5,16 @@ package org.game
 
 class TicTacToeGame() {
     fun printCanvas(
-            canvas: List<String?> = listOf(null, null, null, null, null, null, null, null, null)
+            canvas: List<String> = listOf(" ", " ", " ", " ", " ", " ", " ", " ", " ")
     ) {
         println(
                 """
 ┌-----------┐
-| ${canvas[0]?: " "} | ${canvas[1]?: " "} | ${canvas[2]?: " "} |
+| ${canvas[0]} | ${canvas[1]} | ${canvas[2]} |
 ├-----------┤
-| ${canvas[3]?: " "} | ${canvas[4]?: " "} | ${canvas[5]?: " "} |
+| ${canvas[3]} | ${canvas[4]} | ${canvas[5]} |
 ├-----------┤
-| ${canvas[6]?: " "} | ${canvas[7]?: " "} | ${canvas[8]?: " "} |
+| ${canvas[6]} | ${canvas[7]} | ${canvas[8]} |
 └-----------┘
 """
         )
