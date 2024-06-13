@@ -6,8 +6,11 @@ package org.game
 import kotlin.math.abs
 
 class TicTacToeGame {
+
+    val currentCanvas: MutableList<MutableList<Char>> = mutableListOf(mutableListOf(' ', ' ', 'x'), mutableListOf(' ', 'o', ' '), mutableListOf('x', ' ', ' '))
+
     fun printCanvas(
-        canvas: List<List<Char>> = listOf(listOf(' ', ' ', ' '), listOf(' ', ' ', ' '), listOf(' ', ' ', ' '))
+        canvas: List<List<Char>> = currentCanvas
     ) {
         println(
             """
@@ -56,6 +59,7 @@ class TicTacToeGame {
             if (lastMove != canvas[k][k]) {
                 break
             }
+            sk ++
         }
         if (sk == 3) {
             return lastMove
@@ -68,6 +72,7 @@ class TicTacToeGame {
             if (lastMove != canvas[l][p]) {
                 break
             }
+            sl ++
         }
         if (sl == 3) {
             return lastMove
@@ -80,4 +85,5 @@ class TicTacToeGame {
 fun main() {
     val match = TicTacToeGame()
     match.printCanvas()
+    print(match.checkWinner('x', match.currentCanvas))
 }
