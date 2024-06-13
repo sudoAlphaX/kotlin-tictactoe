@@ -3,6 +3,8 @@
  */
 package org.game
 
+import kotlin.math.abs
+
 class TicTacToeGame {
     fun printCanvas(
         canvas: List<List<Char>> = listOf(listOf(' ', ' ', ' '), listOf(' ', ' ', ' '), listOf(' ', ' ', ' '))
@@ -62,7 +64,7 @@ class TicTacToeGame {
         // Check Anti-Diagonal \
         var sl: Int = 0
         for (l in 0..2) {
-            val p: Int = l-2
+            val p: Int = abs(l-2)
             if (lastMove != canvas[l][p]) {
                 break
             }
