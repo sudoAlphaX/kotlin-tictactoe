@@ -3,18 +3,18 @@
  */
 package org.game
 
-class TicTacToeGame() {
+class TicTacToeGame {
     fun printCanvas(
-            canvas: List<String> = listOf(" ", " ", " ", " ", " ", " ", " ", " ", " ")
+        canvas: List<List<Char>> = listOf(listOf(' ', ' ', ' '), listOf(' ', ' ', ' '), listOf(' ', ' ', ' '))
     ) {
         println(
-                """
+            """
 ┌-----------┐
-| ${canvas[0]} | ${canvas[1]} | ${canvas[2]} |
+| ${canvas[0][0]} | ${canvas[0][1]} | ${canvas[0][2]} |
 ├-----------┤
-| ${canvas[3]} | ${canvas[4]} | ${canvas[5]} |
+| ${canvas[1][0]} | ${canvas[1][1]} | ${canvas[1][2]} |
 ├-----------┤
-| ${canvas[6]} | ${canvas[7]} | ${canvas[8]} |
+| ${canvas[2][0]} | ${canvas[2][1]} | ${canvas[2][2]} |
 └-----------┘
 """
         )
